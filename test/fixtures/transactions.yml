@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player: one
+  team: one
+  date: 2016-12-11 17:34:56
+  role: MyString
+  transtype: one
+
+two:
+  player: two
+  team: two
+  date: 2016-12-11 17:34:56
+  role: MyString
+  transtype: two

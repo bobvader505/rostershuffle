@@ -1,0 +1,21 @@
+<p>
+	<strong>Team:<strong>
+	<%= @team.name %>
+</p>
+
+<p>
+	<strong>Abbreviation:<strong>
+	<%= @team.abbreviation %>
+</p>
+
+<p>
+	<strong>Logo:<strong>
+	<img src="<%= @team.logo_url %>"/>
+</p>
+</p>
+	<strong>Transactions:<strong>
+	<ul>
+	<% @team.transactions.each do |transaction| %>
+		<li><%= transaction.date %> <%= transaction.player.tag %> <%= transaction.transtype.name %></li>
+	<% end %>
+</p>
