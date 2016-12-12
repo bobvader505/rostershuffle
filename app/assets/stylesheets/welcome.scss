@@ -1,3 +1,40 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#logo{
+	padding-top:30px;
+	background-image: url('lcs.png');
+	background-position: center;
+    height: 175px;
+    background-repeat: no-repeat;
+    background-size: 200px;
+}
+
+#intro{
+	color: EEE;
+    font-size: 13px;
+	font-family: 'Rubik', sans-serif;
+	text-align: center;
+}
+
+.teamname{
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+	font-family: "PT Sans Narrow";
+}
+
+.team{
+	text-align: center;
+	height: 360px;
+}
+
+ul{
+	list-style: none;
+}
+
+.playernames{
+	font-size: 13px;
+	font-family: "PT Sans Narrow";
+}
