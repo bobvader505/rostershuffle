@@ -1,3 +1,6 @@
+User.create!([
+  {email: "bobvader505@gmail.com", encrypted_password: "$2a$11$tgfvOK/f6waZ2TSIYukHR.Nl/iG.fAI4c42Rsb0Vs2rJxTIvsVghS", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-12-13 04:45:16", last_sign_in_at: "2016-12-13 04:45:16", current_sign_in_ip: "::1", last_sign_in_ip: "", superadmin_role: true}
+])
 Player.create!([
   {firstname: "Jung", name: "Impact", lastname: "Eon-yeong"},
   {firstname: "William", name: "Meteos", lastname: "Hartman"},
@@ -60,7 +63,7 @@ Role.create!([
   {name: "Coach", order: 6}
 ])
 Team.create!([
-  {name: "Team SoloMid", abbreviation: "TSM", logo_url: "http://i.imgur.com/O5bpx1K.png", color: "FFFFFF"},
+  {name: "Team SoloMid", abbreviation: "TSM", logo_url: "http://i.imgur.com/O5bpx1K.png", color: "C0C0C0"},
   {name: "Cloud9", abbreviation: "C9", logo_url: "http://i.imgur.com/yORfetB.png", color: "459fd3"},
   {name: "Cloud9 Challenger", abbreviation: "C9C", logo_url: "http://i.imgur.com/yORfetB.png", color: "459fd3"},
   {name: "Counter Logic Gaming", abbreviation: "CLG", logo_url: "http://i.imgur.com/lUv5WSR.png", color: "00b5e2"},
@@ -68,7 +71,7 @@ Team.create!([
   {name: "Immortals", abbreviation: "IMT", logo_url: "http://i.imgur.com/3StAMJK.png", color: "01b2aa"},
   {name: "Phoenix1", abbreviation: "P1", logo_url: "http://i.imgur.com/iDB8aLX.png", color: "f99c01"},
   {name: "Team Dignitas", abbreviation: "DIG", logo_url: "http://i.imgur.com/EwvAbpx.png", color: "FAC700"},
-  {name: "Team EnVyUs", abbreviation: "NV", logo_url: "http://i.imgur.com/ZC3OeHz.png", color: "FFF0E2"},
+  {name: "Team EnVyUs", abbreviation: "NV", logo_url: "http://i.imgur.com/ZC3OeHz.png", color: "0078e7"},
   {name: "Team Liquid", abbreviation: "TL", logo_url: "http://i.imgur.com/YKvX8F8.png", color: "7CBAE6"}
 ])
 Transaction.create!([
@@ -121,8 +124,7 @@ Transaction.create!([
   {player_id: 48, team_id: 1, date: "2013-11-02 00:00:00", role: "Mid", transtype_id: 1},
   {player_id: 49, team_id: 1, date: "2016-12-07 00:00:00", role: "Bot", transtype_id: 1},
   {player_id: 50, team_id: 1, date: "2016-05-18 00:00:00", role: "Support", transtype_id: 1},
-  {player_id: 51, team_id: 1, date: "2016-02-16 00:00:00", role: "Coach", transtype_id: 1},
-  {player_id: 3, team_id: 2, date: "2016-12-11 15:42:00", role: "Jungle", transtype_id: 2}
+  {player_id: 51, team_id: 1, date: "2016-02-16 00:00:00", role: "Coach", transtype_id: 1}
 ])
 Transtype.create!([
   {name: "Join"},
