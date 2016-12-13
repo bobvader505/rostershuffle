@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-
+  before_action :authenticate_user!
+  
   def calculate_current_team
 		team = Team.find(params[:id])
 		roster = Array.new

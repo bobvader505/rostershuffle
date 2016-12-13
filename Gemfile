@@ -36,6 +36,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'rails_admin', '~> 1.0'
 gem 'taps', '~> 0.3.24'
+gem 'devise'
+gem 'toastr-rails'
+gem 'cancancan'
+gem 'remotipart', github: 'mshibuya/remotipart'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
