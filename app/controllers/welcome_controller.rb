@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   skip_before_action :authenticate_user!, :only => [:index]
-  
+
   def index
   	@teams = Team.all.order("name")
   	@transactions = Transaction.limit(5).order("date desc")
@@ -16,8 +16,8 @@ class WelcomeController < ApplicationController
 					roster.delete_at(roster.index(transaction.player))
 				end
 			end
-		end
-		team.roster = roster
+		end 
+		team.roster = roster.sort_by {|player| player.role.order}
   	end
   end
 end

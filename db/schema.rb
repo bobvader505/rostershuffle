@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161213043713) do
+ActiveRecord::Schema.define(version: 20161213071151) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",              default: "", null: false
@@ -60,12 +60,14 @@ ActiveRecord::Schema.define(version: 20161213043713) do
   create_table "transactions", force: :cascade do |t|
     t.integer  "player_id"
     t.integer  "team_id"
-    t.datetime "date"
-    t.string   "role"
+    t.date     "date"
+    t.integer  "role_id"
     t.integer  "transtype_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "source"
     t.index ["player_id"], name: "index_transactions_on_player_id"
+    t.index ["role_id"], name: "index_transactions_on_role_id"
     t.index ["team_id"], name: "index_transactions_on_team_id"
     t.index ["transtype_id"], name: "index_transactions_on_transtype_id"
   end

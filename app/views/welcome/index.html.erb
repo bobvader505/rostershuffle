@@ -15,7 +15,7 @@
 			</div>
 			<div>
 				<% team.roster.each do |player| %>
-					<div class="playernames"><%= player.firstname %> <span class="playername" style="color:#<%= team.color %>;">"<%= player.name %>"</span> <%= player.lastname %> (<%= player.role %>)</div>
+					<div class="playernames"><%= player.firstname %> <span class="playername" style="color:#<%= team.color %>;">"<%= player.name %>"</span> <%= player.lastname %> (<%= player.role.name %>)</div>
 				<% end %>
 			</div>
 		</div>
