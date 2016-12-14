@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161213071151) do
+ActiveRecord::Schema.define(version: 20161214043146) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",              default: "", null: false
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 20161213071151) do
     t.string   "lastname"
   end
 
+  create_table "regions", force: :cascade do |t|
+    t.string  "name"
+    t.string  "slug"
+    t.string  "logo"
+    t.boolean "active"
+  end
+
   create_table "roles", force: :cascade do |t|
     t.string   "name"
     t.integer  "order"
@@ -49,6 +56,8 @@ ActiveRecord::Schema.define(version: 20161213071151) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "color"
+    t.integer  "region_id"
+    t.index ["region_id"], name: "index_teams_on_region_id"
   end
 
   create_table "transaction_types", force: :cascade do |t|
