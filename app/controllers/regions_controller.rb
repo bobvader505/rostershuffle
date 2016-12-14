@@ -1,4 +1,6 @@
 class RegionsController < ApplicationController
+  skip_before_action :authenticate_user!, :only => [:show]
+
   def show
   	@curr_region = Region.find_by_slug(params[:slug])
   	@regions = Region.all
