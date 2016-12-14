@@ -39,6 +39,7 @@ gem 'taps', '~> 0.3.24'
 gem 'devise'
 gem 'toastr-rails'
 gem 'cancancan'
+gem 'twitter'
 gem 'remotipart', github: 'mshibuya/remotipart'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
