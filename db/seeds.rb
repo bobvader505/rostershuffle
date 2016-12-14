@@ -1,6 +1,3 @@
-User.create!([
-  {email: "bobvader505@gmail.com", encrypted_password: "$2a$11$tgfvOK/f6waZ2TSIYukHR.Nl/iG.fAI4c42Rsb0Vs2rJxTIvsVghS", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-12-13 04:45:16", last_sign_in_at: "2016-12-13 04:45:16", current_sign_in_ip: "::1", last_sign_in_ip: "", superadmin_role: true}
-])
 Player.create!([
   {firstname: "Jung", name: "Impact", lastname: "Eon-yeong"},
   {firstname: "William", name: "Meteos", lastname: "Hartman"},
