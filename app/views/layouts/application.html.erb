@@ -39,7 +39,9 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= game.name %> <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <% game.regions.each do |region| %>
-                <li><a href="/<%= game.slug %>/<%= region.slug %>"><%= region.name %></a></li>
+                  <% if region.active == true %>
+                    <li><a href="/<%= game.slug %>/<%= region.slug %>"><%= region.name %></a></li>
+                  <% end %>
                 <% end %>
               </ul>
             </li>
