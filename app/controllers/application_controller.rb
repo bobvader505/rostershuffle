@@ -1,20 +1,10 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
-  before_action :authenticate_user!
-  
-  def calculate_current_team
-		team = Team.find(params[:id])
-		roster = Array.new
-		team.transactions.each do |transaction|
-			if transaction.transtype.name == "Join"
-				roster.push(transaction.player)
-			end
-			if transaction.transtype.name == "Leave"
-				if roster.include?(transaction.player)
-					roster.delete_at(roster.index(transaction.player))
-				end
-			end
-		end
-		@roster = roster
+	protect_from_forgery with: :exception
+	before_action :authenticate_user!
+	layout 'application'
+	before_filter :set_constants
+
+	def set_constants
+	    @games = Game.where(:active =>  true)
 	end
 end

@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   resources :transactions
 
   get "/transactions/tweet/:id" => 'transactions#tweet'
-  get "/region/:slug" => 'regions#show'
+  get "/:game_slug/:region_slug" => 'games#show'
 
-  root to: 'regions#show', slug: 'na-lcs'
+  root to: 'games#show', game_slug: 'lol', region_slug: 'na-lcs'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

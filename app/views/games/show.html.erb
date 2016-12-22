@@ -1,0 +1,25 @@
+<div id="logo">
+	<img src="<%= @curr_region.logo %>" height="200"/>
+</div>
+
+<div id="teams" class="container">
+	<div class="row">
+		<% @teams.each_with_index do |team, index| %>
+		<% if index == 8 %>
+		<div class="col-sm-offset-3 col-sm-3 team col-centered">
+		<% else %>
+		<div class="col-sm-3 team col-centered">
+		<% end %>
+			<img src="<%= team.logo_url %>" width="200" height="200"/>
+			<div class="teamname">
+				<%= team.name %>
+			</div>
+			<div>
+				<% team.roster.each do |player| %>
+					<div class="playernames"><%= player.firstname %> <span class="playername" style="color:#<%= team.color %>;">"<%= player.name %>"</span> <%= player.lastname %> (<%= player.role.name %>)</div>
+				<% end %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>

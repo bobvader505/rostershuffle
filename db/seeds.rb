@@ -1,3 +1,6 @@
+Game.create!([
+  {name: "League of Legends", logo: "", active: true}
+])
 Player.create!([
   {firstname: "Jung", name: "Impact", lastname: "Eon-yeong"},
   {firstname: "William", name: "Meteos", lastname: "Hartman"},
@@ -128,6 +131,6 @@ Transaction.create!([
   {player_id: 50, team_id: 1, date: "2016-02-16", role_id: 7, transtype_id: 1, source: nil}
 ])
 Transtype.create!([
-  {name: "Join"},
-  {name: "Leave"}
+  {name: "Join", verb: "joined"},
+  {name: "Leave", verb: "left"}
 ])

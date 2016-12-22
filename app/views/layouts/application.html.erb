@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Roster</title>
+    <title>Roster Shuffle</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -20,6 +20,34 @@
   </head>
 
   <body>
+
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="navbar-brand">Roster Shuffle</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <% @games.each do |game| %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= game.name %> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <% game.regions.each do |region| %>
+                <li><a href="/<%= game.slug %>/<%= region.slug %>"><%= region.name %></a></li>
+                <% end %>
+              </ul>
+            </li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <% unless flash.empty? %>
     <script type="text/javascript">
       <% flash.each do |f| %>
