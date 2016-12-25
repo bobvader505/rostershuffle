@@ -9,7 +9,7 @@ class GamesController < ApplicationController
   	@transactions = Transaction.limit(5).order("date desc")
   	@teams.each do |team|
 		roster = Array.new
-		team.transactions.each do |transaction|
+		team.transactions.order("date asc").each do |transaction|
 			if transaction.transtype.name == "Join"
 				transaction.player.role = transaction.role
 				roster.push(transaction.player)
