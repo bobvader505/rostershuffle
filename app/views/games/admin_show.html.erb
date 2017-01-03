@@ -1,0 +1,11 @@
+<div>Admin: Games</div>
+
+<h1>Games</h1>
+<ul>
+	<% @games.each do |game| %>
+	<li> <a href="/newadmin/<%= game.slug %>"><%= game.name %> </a></li>
+	<% end %>
+</ul>
+</div>
+	<a href="/newadmin/game/new">New</a>
+</div>

@@ -1,0 +1,11 @@
+<div>Admin: Games->Regions</div>
+
+<h1><%= @game.name %></h1>
+<ul>
+	<% @game.regions.each do |region| %>
+	<li> <a href="/newadmin/<%= @game.slug %>/<%= region.slug %>"><%= region.name %> </a></li>
+	<% end %>
+</ul>
+</div>
+	<a href="/newadmin/<%= @game.slug %>/region/new">New</a>
+</div>

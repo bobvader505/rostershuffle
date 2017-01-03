@@ -22,4 +22,8 @@ class RegionsController < ApplicationController
 		team.roster = roster.sort_by {|player| player.role.order}
   	end
   end
+
+  def admin_show
+  	@game = Game.find_by_slug(params[:game_slug])
+  end
 end

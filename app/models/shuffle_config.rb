@@ -1,0 +1,2 @@
+class ShuffleConfig < ApplicationRecord
+end

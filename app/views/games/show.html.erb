@@ -16,7 +16,23 @@
 			</div>
 			<div>
 				<% team.roster.each do |player| %>
-					<div class="playernames"><%= player.firstname %> <span class="playername" style="color:#<%= team.color %>;">"<%= player.name %>"</span> <%= player.lastname %> (<%= player.role.name %>)</div>
+					<div class="playernames tooltip2">
+						<%= player.firstname %>
+							<span class="playername" style="color:#<%= team.color %>;">"<%= player.name %>"</span>
+						<%= player.lastname %> (<%= player.role.name %>)
+						<span class="tooltiptext2">
+							<% if (defined? player.nationality) && (player.nationality != '') %>
+								Residency: <%= player.nationality %>
+							<% end %>
+							<% if (defined? player.birthday) && (player.birthday != '') %>
+								Birthday: <%= player.birthday %>
+							<% end %>
+							<% if (defined? player.twitter) && (player.twitter != '') %>
+								Twitter: www.twitter.com/<%= player.twitter %>
+							<% end %>
+						</span>
+
+					</div>
 				<% end %>
 			</div>
 		</div>
